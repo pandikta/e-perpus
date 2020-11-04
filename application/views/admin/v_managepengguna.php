@@ -169,9 +169,9 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                     </div>
-                                    <input type="Password" name="password" id="pass" class="form-control pwstrength" value="<?= $ti['password'] ?>" required>
+                                    <input type="Password" name="password" id="password" class="form-control pwstrength" value="<?= $ti['password'] ?>" required>
                                     <div class="input-group-text">
-                                        <input id="mybutton" onclick="change()" type="checkbox" aria-label="Checkbox for following text input"> Lihat Password
+                                        <input id="myinput" onclick="showpass()" type="checkbox" aria-label="Checkbox for following text input"> Lihat Password
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -196,15 +196,15 @@
                 </div>
             </div>
             <script>
-                function change() {
-                    var x = document.getElementById('pass').type;
+                function showpass() {
+                    var x = document.getElementById('password').type;
 
                     if (x == 'password') {
-                        document.getElementById('pass').type = 'text';
-                        document.getElementById('mybutton').innerHTML;
+                        document.getElementById('password').type = 'text';
+                        document.getElementById('myinput').innerHTML;
                     } else {
-                        document.getElementById('pass').type = 'password';
-                        document.getElementById('mybutton').innerHTML;
+                        document.getElementById('password').type = 'password';
+                        document.getElementById('myinput').innerHTML;
                     }
                 }
             </script>
